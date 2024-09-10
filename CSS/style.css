@@ -1,0 +1,193 @@
+* {
+    /* Elimina los márgenes y rellenos predeterminados de todos los elementos */
+    margin: 0;
+    padding: 0;
+
+    /* Asegura que el tamaño de los elementos incluya bordes y rellenos en su cálculo */
+    box-sizing: border-box;
+
+    /* Elimina la decoración (como subrayado) de los enlaces por defecto */
+    text-decoration: none;
+
+    /* Aplica la fuente 'Poppins' a todos los elementos de la página */
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* Define variables CSS para los colores y tamaños de texto */
+    --color_text-primary: #4D93FF;       /* Color de texto primario */
+    --color_text-secundary: #0226E1;     /* Color de texto secundario */
+    --color_text-tertiary: #1A8CFF;      /* Color de texto terciario */
+    --main_color-primary: #155404;       /* Color principal */
+    --main_color-secundary: #8ADA74;     /* Color secundario */
+    --background-color: #EFF0EF;         /* Color de fondo */
+    --lowText_font_size: 16px;           /* Tamaño de fuente para texto pequeño */
+    --text_size_title: 40px;             /* Tamaño de fuente para títulos */
+    --text_title_card: 24px;             /* Tamaño de fuente para títulos de tarjeta */
+    --text_title_cardv2: 20px;           /* Tamaño de fuente para subtítulos de tarjeta */
+    --text_paragraph: 16px;              /* Tamaño de fuente para párrafos */
+    --box_shadow-primary: 0px 6px 50px -20px rgba(0,0,0,0.2); /* Sombra principal */
+}
+
+/* Header */
+
+header {
+    /* El header ocupa el 100% del ancho */
+    width: 100%;
+
+    /* Define la altura del header en 100px */
+    height: 100px;
+
+    /* Hace que el header permanezca fijo mientras se hace scroll */
+    position: fixed;
+
+    /* Controla el apilamiento del header para que esté por encima de otros elementos */
+    z-index: 100;
+    background-color: rgb(215, 229, 250);
+}
+
+.container_header {
+    max-width: 1200px;
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0px 0px;
+
+    background-color:rgb(215, 229, 250);
+}
+
+.name_logo{
+    margin-left: 15px;
+}
+
+.logo {
+    /* Usa flexbox para alinear los elementos hijos del logo */
+    display: flexbox;
+    padding: 15px;
+
+    /* Alinea verticalmente el contenido del logo */
+    align-items: center;
+
+    /* Posiciona el logo en un nivel superior, en caso de superposición */
+    position: relative;
+    z-index: 1;
+}
+
+.logo img {
+    /* Define el ancho de la imagen del logo a 100px */
+    width: 100px;
+}
+
+.menu {
+    /* Usa flexbox para alinear los elementos del menú */
+    display: flex;
+
+    /* Alinea verticalmente los elementos dentro del menú */
+    align-items: center;
+
+    /* Fondo transparente por defecto para el menú */
+    background-color: transparent;
+
+    /* Aplica una transición suave al cambiar el color de fondo */
+    transition: background-color 0.3s ease;
+
+    /* Hace que el menú se quede fijo en la parte superior cuando se hace scroll */
+    position: sticky;
+
+    /* Fija la posición del menú en la parte superior de la pantalla */
+    top: 0;
+
+    /* Asegura que el menú ocupe el ancho completo de la pantalla */
+    width: 100%;
+
+    /* Asegura que el menú esté en la parte superior de otros elementos */
+    z-index: 1000;
+}
+
+.menu nav {
+    /* Añade un margen de 20px a los lados del menú de navegación */
+    margin: 0px 20px;
+}
+
+.menu nav ul {
+    /* Usa flexbox para alinear los elementos de la lista horizontalmente */
+    display: flex;
+}
+
+.menu nav ul li {
+    /* Elimina los puntos de lista predeterminados */
+    list-style: none;
+
+    /* Añade un margen de 20px arriba y abajo, y 16px a los lados */
+    margin: 20px 16px;
+}
+
+.menu nav ul li a {
+    /* Aplica el color de texto secundario a los enlaces del menú */
+    color: var(--color_text-secundary);
+
+    /* Usa el tamaño de texto pequeño definido en las variables */
+    font-size: var(--lowText_font_size);
+
+    /* Define que el enlace esté en posición relativa */
+    position: relative;
+}
+
+.menu nav ul li a:hover {
+    /* Cambia el color del enlace al primario cuando se pasa el ratón sobre él */
+    color: var(--color_text-primary);
+}
+.btn_quote {
+    /* Hace que el botón se muestre como un bloque */
+    display: block;
+
+    /* Define el relleno del botón: 8px arriba/abajo, 40px a los lados */
+    padding: 8px 40px;
+
+    /* Añade un borde sólido de 2px del color de texto primario */
+    border: 5px solid var(--color_text-primary);
+    /* Aplica bordes redondeados de 8px al botón */
+    border-radius: 8px;
+
+    /* Hace el texto más grueso */
+    font-weight: 400;
+
+    /* Aplica el color de texto terciario al texto del botón */
+    color: var(--color_text-tertiary);
+
+    /* Añade un margen lateral de 20px */
+    margin: 0px 20px;
+
+    /* Aplica una transición suave de 300ms a todas las propiedades */
+    transition: all 300ms;
+}
+
+.btn_quote:hover {
+    /* Cambia el color del texto a blanco cuando se pasa el ratón */
+    color: white;
+
+    /* Cambia el fondo del botón al color primario */
+    background: var(--color_text-primary);
+}
+
+.redesociales img {
+    width: 80px;
+    height: 50px;
+    margin-left:100px;
+    padding: 10px;
+}
+
+.body {
+    background-image: url(https://believe.earth/wp-content/uploads/2018/10/economia-agua-pixabay-believe-earth-1024x683.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
